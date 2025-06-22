@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './comp/Header';
 import { Box, Card, CardContent, createTheme, ThemeProvider } from '@mui/material';
 import Home from './page/Home'
