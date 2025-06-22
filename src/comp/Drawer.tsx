@@ -23,7 +23,10 @@ export default function TDrawer({Items}) {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {Items.map((content: any, index: any) => (
+        {
+        Items.map((Item: any, index: any)=>([
+
+          Item.map((content: any, index: any) => (
           <ListItem key={index} disablePadding>
             <Link to={content[1]} style={{textDecoration: 'none', width: '100%', color:useTheme().palette.text.primary}}>
             <ListItemButton href={content[1]}>
@@ -33,9 +36,13 @@ export default function TDrawer({Items}) {
             </ListItemButton>
             </Link>
           </ListItem>
-        ))}
+        )),
+      <Divider key={index} />
+
+      ])
+    )
+        }
       </List>
-      <Divider />
     </Box>
   );
 

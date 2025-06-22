@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './comp/Header';
-import { Box, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Card, CardContent, createTheme, ThemeProvider } from '@mui/material';
 import Home from './page/Home'
 import About from './page/About'
-import { config } from './asset/config'
+import Tenet from './page/Tenet';
+import GameIndex from './page/Games/GameIndex';
+import Lastone from './page/Games/Lastone';
+import { pages } from './page/Page'
 var theme = createTheme()
 function App() {
   return (
@@ -12,15 +15,22 @@ function App() {
       <ThemeProvider theme={theme}>
         <Box paddingBottom={1}>
           <Header Title={"Gugu"} Items={
-            config['path']
+            pages
           } />
         </Box>
       </ThemeProvider>
       <Box>
+        <Card elevation={1}>
+          <CardContent>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/tenet" element={<Tenet />} />
           <Route path="/about" element={<About />} />
+          <Route path="/games" element={<GameIndex />} />
+          <Route path="/games/lastone" element={<Lastone />} />
         </Routes>
+        </CardContent>
+        </Card>
         <footer>© 2025 Gugu</footer>
       </Box>
     </BrowserRouter>
