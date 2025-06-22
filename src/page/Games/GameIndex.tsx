@@ -11,14 +11,13 @@ export default function Home(){
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[3],
   }));
-  return (<>还没写,Bug还没改完qwq</>);
+  // return (<>还没写,Bug还没改完qwq</>);
   return (
             <Box>
-              <Link to="/games/lastone">
+              <Link to="/games/">
             <TCard>
                 <CardContent>
-                  <h3>上一个数字</h3>
-                  考察记忆力，欢迎赤石。
+                  <h3>什么都没写</h3>
                 </CardContent>
             </TCard>
             </Link>

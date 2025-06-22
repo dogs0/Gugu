@@ -1,14 +1,12 @@
-import * as React from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './comp/Header';
-import { Box, Card, CardContent, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Card, CardContent, createTheme, ThemeProvider, type Theme } from '@mui/material';
 import Home from './page/Home'
 import About from './page/About'
 import Tenet from './page/Tenet';
 import GameIndex from './page/Games/GameIndex';
-import Lastone from './page/Games/Lastone';
 import { pages } from './page/Page'
-var theme = createTheme()
+var theme: Theme = createTheme();
 function App() {
   return (
     <BrowserRouter>
@@ -27,7 +25,6 @@ function App() {
           <Route path="/tenet" element={<Tenet />} />
           <Route path="/about" element={<About />} />
           <Route path="/games" element={<GameIndex />} />
-          <Route path="/games/lastone" element={<Lastone />} />
         </Routes>
         </CardContent>
         </Card>

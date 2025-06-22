@@ -1,4 +1,3 @@
-import { Card, CardContent } from '@mui/material'
 export default function Home(){
     return (
     <>
